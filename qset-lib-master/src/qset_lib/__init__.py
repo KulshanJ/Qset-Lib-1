@@ -12,7 +12,7 @@ class Rover:
         rospy.init_node("mod3_lib")
         self.x = 0.0
         self.y = 0.0
-        self.heading = 0.0
+        self.heading = 5.0
         self.__name = "robot"
         ms_sub = rospy.Subscriber("/gazebo/model_states", ModelStates, self.__modelstates_callback, queue_size=1)
         laser_sub = rospy.Subscriber("/scan", LaserScan, self.__laser_callback, queue_size=1)
